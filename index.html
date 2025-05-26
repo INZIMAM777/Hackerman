@@ -1,0 +1,198 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackerman</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: green;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+    h1 {
+        font-size: 3em;
+        margin-top: 50px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    ul li {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2em;
+        }
+        ul li {
+            font-size: 1.2em;
+        }
+    }
+</style>
+<body>
+    <h1 align="center">Warm Welcome To Hacking World</h1>
+    <div align="center">
+        <ul></ul>
+    </div>
+    <script src="hack.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACK IN PROGRESS</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="none" stroke="%230f0" stroke-width="1"/><circle cx="8" cy="8" r="1" fill="%230f0"/></svg>'), auto;
+        }
+        .container {
+            position: relative;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+            text-shadow: 0 0 10px #0f0;
+            animation: glitch 1s linear infinite;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #0f0;
+            box-shadow: 0 0 20px #0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        ul:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #0f0;
+            box-shadow: 0 0 10px #0f0;
+            animation: scanline 6s linear infinite;
+        }
+        ul li {
+            font-size: 1.2em;
+            margin: 10px;
+            padding: 8px;
+            border-bottom: 1px dashed #0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .warning {
+            color: #f00;
+            text-shadow: 0 0 5px #f00;
+            font-weight: bold;
+            animation: blink 0.5s step-end infinite alternate;
+        }
+        .success {
+            color: #0f0;
+            text-shadow: 0 0 5px #0f0;
+        }
+        .danger {
+            color: #ff0;
+            text-shadow: 0 0 5px #ff0;
+        }
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        .access-denied {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 3em;
+            color: red;
+            text-shadow: 0 0 10px red;
+            display: none;
+        }
+        .flashing {
+            animation: flash 0.3s linear infinite;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        @keyframes flash {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            ul li { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-rain" id="matrixRain"></div>
+    <div class="container">
+        <h1>SYSTEM HACK IN PROGRESS</h1>
+        <div class="terminal">
+            <ul></ul>
+        </div>
+    </div>
+    <div class="access-denied" id="accessDenied">
+        <div>ACCESS DENIED</div>
+        <div class="flashing">UNAUTHORIZED INTRUSION DETECTED</div>
+        <div>USER: HAASHIR_27</div>
+        <div class="flashing">TERMINAL LOCKED</div>
+    </div>
+
+    <audio id="typingSound" src="https://assets.mixkit.co/sfx/preview/mixkit-fast-typing-on-a-keyboard-2544.mp3" preload="auto"></audio>
+    <audio id="warningSound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" preload="auto"></audio>
+    <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3" preload="auto"></audio>
+    <audio id="dangerSound" src="https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-ambience-727.mp3" preload="auto"></audio>
+    <audio id="hackedSound" src="https://assets.mixkit.co/sfx/preview/mixkit-ominous-drone-227.mp3" preload="auto"></audio>
+
+    
+  <script src="hack.js"></script>
+  
+</body>
+</html>
